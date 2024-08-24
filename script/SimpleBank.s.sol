@@ -1,18 +1,18 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.13;
+pragma solidity ^0.8.26;
 
 import {Script, console} from "forge-std/Script.sol";
-import {Counter} from "../src/Counter.sol";
+import {SimpleBank} from "../src/SimpleBank.sol";
 
-contract CounterScript is Script {
-    Counter public counter;
+contract SimpleBankScript is Script {
+    SimpleBank public bank;
 
     function setUp() public {}
 
     function run() public {
         vm.startBroadcast();
 
-        counter = new Counter();
+        bank = new SimpleBank();
 
         vm.stopBroadcast();
     }
